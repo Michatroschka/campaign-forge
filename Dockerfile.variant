@@ -1,0 +1,12 @@
+# Campaign Forge — marketing campaign worker agent
+# Built on the Plow OpenClaw base image. See README.md.
+FROM public.ecr.aws/e1h7x4a2/plow-cloud-agents:base-latest
+
+# Agent Index listing id — boot registers this listing and reports usage.
+ENV AGENT_ID=campaign-forge
+ENV AGENT_NAME="Campaign Forge"
+ENV AGENT_BLURB="Text your product, get a complete marketing campaign: live landing page, AI product photos from YOUR photos, catalog PDF, social posts — every piece approved by you in chat."
+ENV AGENT_RUNTIME="OpenClaw"
+
+COPY prompt/AGENTS.md /opt/plow/prompt/AGENTS.md
+COPY skills/ /opt/plow/skills/

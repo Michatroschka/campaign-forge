@@ -1,3 +1,14 @@
+# Never commit credentials or keys
 plow-credentials
+.env
+*.token
+
+# Campaign data stays out of the published repo
+campaigns/
+.openapi-keys.json
+
+# Node
 node_modules/
-dist/
+
+# Local build artifacts
+*.log

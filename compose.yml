@@ -6,6 +6,7 @@ services:
       - "127.0.0.1:3001:3001"
     volumes:
       - state:/var/lib/plow
+      - ./campaigns:/var/lib/plow/workspace/campaigns
     stop_grace_period: 35s
   # Local only. This plays Plow's agent-web proxy, which sits in front of your
   # image in the cloud, so localhost:3001 behaves like the production dashboard.
